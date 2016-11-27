@@ -1,0 +1,13 @@
+#Code::Blocks
+bin/
+obj/
+*.cbp
+*.depend
+*.layout
+*.exe
+
+#Other
+lyrics/
+songs/
+obj/
+
