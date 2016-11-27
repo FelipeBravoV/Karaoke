@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <conio2.h>
 
+#include "list.h"
+#include "hash.h"
 
 void menu_login();
 void menu_usuario(char);
-
 
 
 int main(){
