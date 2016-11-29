@@ -8,6 +8,18 @@
 #include "list.h"
 #include "hash.h"
 
+/*----------------FUNCIONES "create..."-----------*/
+karaoke * create_karaoke(int song_total){
+    karaoke * k = malloc(sizeof(karaoke));
+    k->songs = create_hashmap(song_total*2);
+    k->users = create_hashmap(50);
+    k->song_total = song_total;
+    return k;
+}
+//create_...
+//create_...
+
+/*-------------------MENUS PRINCIPALES------------*/
 void menu_login(){
 
     int op,i,pos,end,flag1=0,terminar_programa=0;
