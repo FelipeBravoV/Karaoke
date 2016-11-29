@@ -6,8 +6,6 @@
 #include "list.h"
 #include "hash.h"
 
-//!!YET ANOTHER CHANGE!!
-
 int main(){
     menu_login();
     return 0;
