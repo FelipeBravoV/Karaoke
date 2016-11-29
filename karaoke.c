@@ -20,7 +20,7 @@ karaoke * create_karaoke(int song_total){
 //create_...
 
 /*-------------------MENUS PRINCIPALES------------*/
-void menu_login(){
+void menu_login(karaoke *k){
 
     int op,i,pos,end,flag1=0,terminar_programa=0;
     char key,nick,new_nick;                          //declaracion de variables
@@ -89,7 +89,7 @@ void menu_login(){
                     scanf("%s",&nick);
                     //!!AQUI ANTES DE IMPRIMIR EL MENU
                     //!!DEBERIA IR UNA FUNCION QUE VALIDE SI NICK ESTA EN EL ARCHIVO, Y DEPENDIENDO DE ESO SE LLAMA A MENU USUARIO
-                    menu_usuario(nick);
+                    menu_usuario(k, nick);
                     break;
 
             case 1: clrscr();
@@ -105,7 +105,7 @@ void menu_login(){
     }while(terminar_programa != 1);
 }
 
-void menu_usuario(char nick){
+void menu_usuario(karaoke *k, char nick){
 
     int op,i,pos,end,flag2=0,terminar_menu=0;
     char key,new_nick,song_name;
@@ -206,7 +206,7 @@ void menu_usuario(char nick){
                     printf(" \n INGRESE EL NOMBRE DE LA CANCION");  //se recibe una palabra para buscar una cancion
                     printf(" \n : ");
                     scanf("%s",&song_name);
-                    menu_postcancion();
+                    menu_postcancion(k);
                     break;
 
             case 1: clrscr(); //MUESTRA LAS CANCIONES ORDENADAS POR ARTISTA
@@ -225,7 +225,7 @@ void menu_usuario(char nick){
     }while(terminar_menu != 1);
 }
 
-void menu_postcancion(){
+void menu_postcancion(karaoke *k){
 
     int op,i,pos,end,flag3=0,terminar_menu2=0;
     char key;                          //declaracion de variables

@@ -58,13 +58,13 @@ song_listened_node * create_song_listened_node();
 
 /*--------------------MENUS PRINCIPALES-----------------------*/
 //menu con opciones para iniciar sesion o crear un usuario
-void menu_login();
+void menu_login(karaoke *k);
 
 //menu con opciones que puede elegir el usuario cuando ya inicia sesion
 //!! Es necesario que ya se haya verifado que el nick existe en la HashMap de usuarios
-void menu_usuario(char nick);
+void menu_usuario(karaoke *k, char nick);
 
 //menu que muestra opciones despues de tocar una cancion
-void menu_postcancion();
+void menu_postcancion(karaoke *k);
 
 #endif /* karaoke_h */

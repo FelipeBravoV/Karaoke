@@ -8,7 +8,7 @@
 
 int main(){
     karaoke * k = create_karaoke(10);
-    menu_login();
+    menu_login(k);
     return 0;
 }
 
